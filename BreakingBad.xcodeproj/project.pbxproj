@@ -17,6 +17,10 @@
 		4221738A28B9998F00539015 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221738928B9998F00539015 /* Requestable.swift */; };
 		4221738C28B999D300539015 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221738B28B999D300539015 /* NetworkRequest.swift */; };
 		4221738E28B99A1500539015 /* NativeRequestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221738D28B99A1500539015 /* NativeRequestable.swift */; };
+		4221739028B9A37400539015 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221738F28B9A37400539015 /* Endpoint.swift */; };
+		4221739228B9A3E500539015 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221739128B9A3E500539015 /* Environment.swift */; };
+		4221739428B9A42300539015 /* Serviceable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221739328B9A42300539015 /* Serviceable.swift */; };
+		4221739728B9C68000539015 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4221739628B9C68000539015 /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +54,10 @@
 		4221738928B9998F00539015 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		4221738B28B999D300539015 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
 		4221738D28B99A1500539015 /* NativeRequestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NativeRequestable.swift; sourceTree = "<group>"; };
+		4221738F28B9A37400539015 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4221739128B9A3E500539015 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		4221739328B9A42300539015 /* Serviceable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Serviceable.swift; sourceTree = "<group>"; };
+		4221739628B9C68000539015 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,11 +145,23 @@
 		4221738828B9997B00539015 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4221739528B9C67500539015 /* Models */,
 				4221738928B9998F00539015 /* Requestable.swift */,
 				4221738B28B999D300539015 /* NetworkRequest.swift */,
 				4221738D28B99A1500539015 /* NativeRequestable.swift */,
+				4221738F28B9A37400539015 /* Endpoint.swift */,
+				4221739128B9A3E500539015 /* Environment.swift */,
+				4221739328B9A42300539015 /* Serviceable.swift */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		4221739528B9C67500539015 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4221739628B9C68000539015 /* Character.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -274,10 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4221739728B9C68000539015 /* Character.swift in Sources */,
 				4221738A28B9998F00539015 /* Requestable.swift in Sources */,
+				4221739428B9A42300539015 /* Serviceable.swift in Sources */,
 				4221736128B9377500539015 /* ContentView.swift in Sources */,
 				4221738C28B999D300539015 /* NetworkRequest.swift in Sources */,
+				4221739228B9A3E500539015 /* Environment.swift in Sources */,
 				4221735F28B9377500539015 /* BreakingBadApp.swift in Sources */,
+				4221739028B9A37400539015 /* Endpoint.swift in Sources */,
 				4221738E28B99A1500539015 /* NativeRequestable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

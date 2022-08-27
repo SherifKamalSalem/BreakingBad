@@ -24,7 +24,7 @@ class CharactersService: Serviceable {
     }
     
     func getCharacters() -> AnyPublisher<[Character], NetworkError> {
-        let endpoint = ListServiceEndpoints.getCharacters
+        let endpoint = CharactersServiceEndpoints.getCharacters
         let request = endpoint.createRequest(environment: self.environment)
         return self.networkRequest.request(request)
     }

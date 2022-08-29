@@ -27,6 +27,14 @@ class CharactersListViewModel: NSObject, ObservableObject, Identifiable {
     
     let willChange = PassthroughSubject<Void, Never>()
     
+    @Published var isSearchResultFound: Bool = false
+    @Published var searchKey = "" {
+        willSet {
+            NSObject.cancelPreviousPerformRequests(withTarget: self)
+            self.perform(#selector(performSearch), with: searchKey, afterDelay: 2.0)
+        }
+    }
+    
     init(charactersService: Serviceable) {
         self.charactersService = charactersService
         super.init()
@@ -58,6 +66,24 @@ class CharactersListViewModel: NSObject, ObservableObject, Identifiable {
                     self.dataSource = dataSource
                 })
             .store(in: &disposables)
+    }
+    
+    func loadSearchResults(_ key: String) {
+        self.searchResultDataSource = self.dataSource.filter({ $0.name.contains(key) })
+    }
+    
+    @objc func performSearch() {
+        if !searchKey.isEmpty {
+            loadSearchResults(searchKey)
+        }
+        else{
+            clearSearch()
+        }
+    }
+    
+    func clearSearch() {
+        self.searchResultDataSource = []
+        self.isSearchResultFound = false
     }
 }
 

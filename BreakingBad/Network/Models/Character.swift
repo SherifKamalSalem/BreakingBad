@@ -9,16 +9,22 @@ import Foundation
 
 struct Character: Codable {
     let charId: Int
-    let name: String
+    let name: String?
     let birthday: String?
     let occupation: [String]
-    let img: String
+    let img: String?
     let status: Status
-    let nickname: String
+    let nickname: String?
     let appearance: [Int]
     let portrayed: String
     let category: Category
-    let betterCallSaulAppearance: [Int]
+    let betterCallSaulAppearance: [Int]?
+    
+    enum CodingKeys: String, CodingKey {
+            case charId = "char_id"
+            case name, birthday, occupation, img, status, nickname, appearance, portrayed, category
+            case betterCallSaulAppearance = "better_call_saul_appearance"
+        }
 }
 
 enum Category: String, Codable {

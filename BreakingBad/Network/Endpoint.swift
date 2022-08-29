@@ -36,7 +36,7 @@ enum CharactersServiceEndpoints {
     func getURL(from environment: Environment) -> String {
         switch self {
         case .getCharacters:
-            return ""
+            return "https://breakingbadapi.com/api/characters"
         }
     }
 }

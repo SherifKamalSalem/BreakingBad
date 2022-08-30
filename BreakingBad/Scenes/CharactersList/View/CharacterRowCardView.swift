@@ -15,7 +15,7 @@ struct CharacterRowCardView: View {
         
         HStack(alignment: .top, spacing: 16) {
             AsyncImage(url: imageURL)
-                .frame(width: 90, height: 120).cornerRadius(4)
+                .frame(width: 90, height: 90).cornerRadius(4)
                 .cornerRadius(8)
             
             VStack(alignment: .leading, spacing: 4, content: {

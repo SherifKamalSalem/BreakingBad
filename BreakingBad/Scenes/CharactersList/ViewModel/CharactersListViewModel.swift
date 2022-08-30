@@ -31,7 +31,7 @@ class CharactersListViewModel: NSObject, ObservableObject, Identifiable {
     @Published var searchKey = "" {
         willSet {
             NSObject.cancelPreviousPerformRequests(withTarget: self)
-            self.perform(#selector(performSearch), with: searchKey, afterDelay: 2.0)
+            self.perform(#selector(performSearch), with: searchKey)
         }
     }
     
@@ -69,19 +69,24 @@ class CharactersListViewModel: NSObject, ObservableObject, Identifiable {
     }
     
     func loadSearchResults(_ key: String) {
+        state = .finished
         self.searchResultDataSource = self.dataSource.filter({ $0.name.contains(key) })
     }
     
     @objc func performSearch() {
-        if !searchKey.isEmpty {
-            loadSearchResults(searchKey)
-        }
-        else{
-            clearSearch()
+        if !self.searchKey.isEmpty {
+            self.loadSearchResults(self.searchKey)
+        } else {
+            self.clearSearch()
         }
     }
     
+    func makeStateLoading() {
+        state = .loading
+    }
+
     func clearSearch() {
+        state = .finished
         self.searchResultDataSource = []
         self.isSearchResultFound = false
     }

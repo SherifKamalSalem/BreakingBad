@@ -18,7 +18,6 @@ class MockAPIServiceCharactersList:  Serviceable {
             promise(.success(jsonData))
         }
         .decode(type: [Character].self, decoder: JSONDecoder())
-        .print("---------- Decode")
         .mapError { error in
             // return error if json decoding fails
             NetworkError.invalidJSON(String(describing: error))

@@ -13,7 +13,8 @@ struct SearchBar: View {
 
   @State private var isEditing = false {
     didSet {
-      viewModel.performSearch()
+        viewModel.makeStateLoading()
+        viewModel.performSearch()
     }
   }
 

@@ -28,5 +28,9 @@ I've created the network module using combine framework and tried to apply separ
 
 ## Video
 
-https://user-images.githubusercontent.com/11644741/187508031-16a60b79-c33b-4cef-8f1e-c31ee77894f3.mp4
+
+https://user-images.githubusercontent.com/11644741/187509922-189093da-a2a3-4db4-a6b0-5d77cb6495ae.mp4
+
+
+
 

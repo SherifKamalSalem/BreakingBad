@@ -20,3 +20,13 @@ Clone the project and open it by Xcode directly I didn't use any third-party lib
 - SwiftUI
 - MVVM An important point in MVVM is that it uses a binder as communication tool between View and ViewModel layers. A technique named Data Binding is used.
 - Combine
+- Dependency injection
+
+## Networking
+
+I've created the network module using combine framework and tried to apply separation of concerns and make network module decoupled from any business logic and implementation details so it can be testable and resuable 
+
+## Video
+
+https://user-images.githubusercontent.com/11644741/187508031-16a60b79-c33b-4cef-8f1e-c31ee77894f3.mp4
+

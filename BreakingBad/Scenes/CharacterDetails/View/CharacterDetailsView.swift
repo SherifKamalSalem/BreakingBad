@@ -14,11 +14,9 @@ struct CharacterDetailsView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .center) {
-                VStack(alignment: .center) {
-                    AsyncImage(url: viewModel.imageURL)
+                AsyncImage(url: viewModel.imageURL)
                         .frame(width: 300, height: 400).cornerRadius(4)
                         .cornerRadius(8)
-                }
                 Text(viewModel.name).font(.title).foregroundColor(.black).bold()
                 Text(viewModel.nickname).font(.headline).foregroundColor(.gray)
                 Text(viewModel.category.rawValue).font(.subheadline).foregroundColor(.gray)

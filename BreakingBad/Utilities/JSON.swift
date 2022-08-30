@@ -7,18 +7,9 @@
 
 import Foundation
 
-struct SwiftUtility {
-    
-   static func loadJson(filename fileName: String) -> Data {
-        if let url = Bundle.main.url(forResource: fileName, withExtension: "json") {
-            do {
-                let dataObj = try Data(contentsOf: url)
-                return dataObj
-            } catch {
-                print("error:\(error)")
-            }
-        }
-        return Data()
+extension String {
+    func toJSON() -> Any? {
+        guard let data = self.data(using: .utf8, allowLossyConversion: false) else { return nil }
+        return data
     }
-    
 }

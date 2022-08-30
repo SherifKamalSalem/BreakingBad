@@ -139,6 +139,7 @@
 		4221735D28B9377500539015 /* BreakingBad */ = {
 			isa = PBXGroup;
 			children = (
+				423EC6E028BD857700AAB918 /* CharactersList.json */,
 				42211B5B28BA3A91008A60C5 /* Utilities */,
 				4221739828B9C7F000539015 /* Scenes */,
 				4221738828B9997B00539015 /* Network */,
@@ -240,7 +241,6 @@
 		423EC6DE28BD853000AAB918 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				423EC6E028BD857700AAB918 /* CharactersList.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
